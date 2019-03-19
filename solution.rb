@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do
-  unless params[:nombre]
+if  params[:nombre].nil? || params[ :nombre].empty?
   "<h1>Hola desconocido!</h1>" # si ingreso al local host sin un parametro imprime esto
 
   else
